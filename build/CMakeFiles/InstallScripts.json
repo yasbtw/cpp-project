@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/yas/Documents/trash/cpp-project/build/cmake_install.cmake",
+		"/home/yas/Documents/trash/cpp-project/build/thirdparty/glfw/cmake_install.cmake",
+		"/home/yas/Documents/trash/cpp-project/build/thirdparty/glfw/src/cmake_install.cmake",
+		"/home/yas/Documents/trash/cpp-project/build/thirdparty/glfw/docs/cmake_install.cmake",
+		"/home/yas/Documents/trash/cpp-project/build/thirdparty/glad/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
