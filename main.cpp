@@ -167,14 +167,7 @@ int main() {
     // it failed to compile
     // wait
     // just warnings
-    unsigned int offset = 0;
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<const void*>(offset)); // this sets the vertex attributes 
-    offset += sizeof(GLfloat) * 2;
-    glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<const void*>(offset)); // this sets the vertex attributes 
-    glEnableVertexAttribArray(0); // lets go back to the top
-    glEnableVertexAttribArray(1); // lets go back to the top
     glBindVertexArray(vao); // lets set up the VAO to not be just empty
-    glCheckError_(__FILE__,__LINE__);
     //OpenGL Error [1281] INVALID_VALUE | /home/yas/Documents/trash/cpp-project/main.cpp:178
     // same
     // i can see the console btw
@@ -191,6 +184,14 @@ int main() {
     
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * 3, verts, GL_STATIC_DRAW);
+    
+    unsigned int offset = 0;
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<const void*>(offset)); // this sets the vertex attributes 
+    offset += sizeof(GLfloat) * 2;
+    glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<const void*>(offset)); // this sets the vertex attributes 
+    glEnableVertexAttribArray(0); // lets go back to the top
+    glEnableVertexAttribArray(1); // lets go back to the top
+    glCheckError_(__FILE__,__LINE__);
     // idk how to make one i never drank one 
     //i feel so sleepy then rebuild hmm ts is wild
     // can u upload this to github wait
